@@ -46,11 +46,11 @@ class Salaried_Employee(Employee):
 
     def __str__(self):
         if (self.comm_contracts == 0 and self.comm_rate == 0 and self.total_commission == 0):
-            return (self.name + " works on a monthly salary of " + str(self.base_pay) + ". Their total pay is " + str(self.get_pay()))
+            return f"{self.name} works on a monthly salary of {str(self.base_pay)}. Their total pay is {str(self.get_pay())}"
         elif (self.comm_contracts == 0 and self.comm_rate == 0 and self.total_commission > 0):
-            return (self.name + " works on a monthly salary of " + str(self.base_pay) + " and receives a bonus commission of " + str(self.total_commission) + ". Their total pay is " + str(self.get_pay()))
+            return f"{self.name} works on a monthly salary of {str(self.base_pay)} and receives a bonus commission of {str(self.total_commission)}. Their total pay is {str(self.get_pay())}"
         elif (self.comm_contracts > 0 and self.comm_rate > 0):
-            return (self.name + " works on a monthly salary of " + str(self.base_pay) + " and receives a commission for " + str(self.comm_contracts) + " contract(s) at " + str(self.comm_rate) + "/contract. Their total pay is " + str(self.get_pay()))
+            return f"{self.name} works on a monthly salary of {str(self.base_pay)} and receives a commission for {str(self.comm_contracts)} contract(s) at {str(self.comm_rate)}/contract. Their total pay is {str(self.get_pay())}"
         else:
             return (self.name)
 
@@ -72,11 +72,11 @@ class Hourly_Employee(Employee):
 
     def __str__(self):
         if (self.comm_contracts == 0 and self.comm_rate == 0 and self.total_commission == 0):
-            return (self.name + " works on a contract of " + str(self.hours) + " hours at " + str(self.wage_rate) + "/hour. Their total pay is " + str(self.get_pay()))
+            return f"{self.name} works on a contract of {str(self.hours)} hours at {str(self.wage_rate)}/hour. Their total pay is {str(self.get_pay())}"
         elif (self.comm_contracts == 0 and self.comm_rate == 0 and self.total_commission > 0):
-            return (self.name + " works on a contract of " + str(self.hours) + " hours at " + str(self.wage_rate) + "/hour and receives a bonus commission of " + str(self.total_commission) + ". Their total pay is " + str(self.get_pay()))
+            return f"{self.name} works on a contract of {str(self.hours)} hours at {str(self.wage_rate)}/hour and receives a bonus commission of {str(self.total_commission)}. Their total pay is {str(self.get_pay())}"
         elif (self.comm_contracts > 0 and self.comm_rate > 0):
-            return (self.name + " works on a contract of " + str(self.hours) + " hours at " + str(self.wage_rate) + "/hour and receives a commission for " + str(self.comm_contracts) + " contract(s) at " + str(self.comm_rate) + "/contract. Their total pay is " + str(self.get_pay()))
+            return f"{self.name} works on a contract of {str(self.hours)} hours at {str(self.wage_rate)}/hour and receives a commission for {str(self.comm_contracts)} contract(s) at {str(self.comm_rate)}/contract. Their total pay is {str(self.get_pay())}"
         else:
             return (self.name)
 
